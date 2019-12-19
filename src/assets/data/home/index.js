@@ -1,0 +1,53 @@
+const totalData ={
+    buttons:[
+        {
+            title:'授课老师',
+            className:'teacher',
+            src:'teacher',
+        },
+        {
+            title:'老师详情',
+            className:'teacherDetail',
+            src:'teacherDetail'
+        },
+        {
+            title:'日课表',
+            className:'classTableDay',
+            src:'classTableDay'
+        },
+        {
+            title:'上课签到',
+            className:'signUp',
+            src:'signUp'
+        },
+        {
+            title:'最新公告',
+            className:'index',
+            src:'newNotice'
+        },
+    ],
+    notice:[
+        {
+            title:'SSPU首家线下瑜伽馆开业啦',
+            url:''
+        },
+        {
+            title:'性感教官在线教学',
+            url:''
+        },
+        {
+            title:'猛男教练现场指导',
+            url:''
+        },
+        {
+            title:'专业教练专业交流',
+            url:''
+        },
+        {
+            title:'犹豫什么赶紧加入吧',
+            url:''
+        },
+
+    ],
+}
+export default totalData
