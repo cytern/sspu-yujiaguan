@@ -37,12 +37,42 @@ export default {
 
   methods:{
     toOthers(src){
+      if(src == 'signUp'){
+         let classes = this.$store.state.classesTable
+        if (classes.length < 1 ){
+          this.$alert('哎呀，出错了', '没有找到您今天的课程', {
+            confirmButtonText: '确定',
+            callback: action => {
+              this.$message({
+                type: 'primary',
+                message: '加入点课程试试吧~'
+              });
+             console.log(action)
+            }
+          });
+        }else {
+        this.$confirm('您确定要签到么?', classes[0].className, {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        }).then(() => {
+          this.$message({
+            type: 'success',
+            message: '签到成功!'
+          });
+        }).catch(() => {
+          this.$message({
+            type: 'warning',
+            message: '已取消'
+          });
+        });}
+      }else {
       this.$router.push(
               {
                 name:src
               }
-
       )
+    }
     },
     choose(){
       this.noticeTrue = false
@@ -171,7 +201,7 @@ export default {
     -o-background-size: cover;
 
   }
-  .teacherDetail{
+  .classes{
     width: 300px;
     height: 300px;
     background: url("../assets/img/teacherDetail.jpg");
@@ -202,12 +232,22 @@ export default {
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
+    transition: 2s;
   }
+  @keyframes myfirst
+  {
+    0% {border:3px dotted white;}
+    50% {border: 15px dotted skyblue;}
+    75% {border: 15px dotted palevioletred}
+    100% {border: 3px dotted white}
+
+  }
+
   .small_Navigation_button:hover{
-    background: url("../assets/img/paidaxiang.jpg");
-    background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
+    animation: myfirst 2s;
+    -moz-animation: myfirst 2s;
+    -webkit-animation: myfirst 2s;
+    -o-animation: myfirst 2s;
 
   }
   .changeList-move {

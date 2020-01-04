@@ -18,7 +18,10 @@ const routes = [
   {
     path: '/teacherDetail',
     name: 'teacherDetail',
-    component: () => import('../views/teacherDetail.vue')
+    component: () => import('../views/teacherDetail.vue'),
+    meta: {
+      keepAlive: true
+    }
   },
   {
     path: '/teacher',
@@ -40,6 +43,21 @@ const routes = [
     name: 'signUp',
     component: () => import('../views/signUp.vue')
   },
+  {
+    path: '/classDetail',
+    name: 'classDetail',
+    component: () => import('../views/classDetail.vue'),
+    meta: {
+      keepAlive: true
+    },
+  },
+  {
+    path: '/classes',
+    name: 'classes',
+    component: () => import('../views/classes.vue')
+  },
+
+
 ]
 
 const router = new VueRouter({

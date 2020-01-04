@@ -6,21 +6,8 @@
            <h2>优质教师</h2>
         </el-button>
     </div>
-<el-button class="teacherTab" v-for="(item,index) in teachers" :key="index" @click="toTeacherDetail(item)">
-    <el-image :src="item.src" class="teacherTab-img"></el-image>
-    <h2 class="teacherTab-name">{{item.name}}</h2>
-    <h5 class="teacherTab-describe">{{item.describe}}</h5>
-    <h1 class="teacherTab-icon">></h1>
-    <h4 class="teacherTab-notice">热度：</h4>
-    <el-rate class="teacherTab-rate"
-            v-model="item.rate"
-             show-score
-             text-color="#ff9900"
-            disabled="disabled"
-            void-icon-class="icon-rate-face-off"
-            :colors="['greenyellow', 'cyan', 'red']">
-    </el-rate>
-</el-button>
+
+
 </div>
     <div>
     <Live2d></Live2d>
@@ -30,7 +17,7 @@
 
 <script>
     import Live2d from "../components/Live2d";
-    import teachers1 from '../assets/data/teachers/index.js'
+    import teachers1 from '../assets/data/teachers/teacheres.js'
     export default {
         name: "teacher",
   components:{
@@ -102,6 +89,7 @@ width: 100px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        line-height: 40px;
         font-weight: 300;
     }
  .teacherTab-icon{

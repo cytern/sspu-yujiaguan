@@ -6,9 +6,9 @@ const totalData ={
             src:'teacher',
         },
         {
-            title:'老师详情',
-            className:'teacherDetail',
-            src:'teacherDetail'
+            title:'开授课程',
+            className:'classes',
+            src:'classes'
         },
         {
             title:'日课表',
