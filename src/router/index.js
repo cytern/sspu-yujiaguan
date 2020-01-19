@@ -29,6 +29,11 @@ const routes = [
     component: () => import('../views/teacher.vue')
   },
   {
+    path: '/newNotice',
+    name: 'newNotice',
+    component: () => import('../views/newNotice.vue')
+  },
+  {
     path: '/classTableDay',
     name: 'classTableDay',
     component: () => import('../views/classTableDay.vue')
@@ -37,6 +42,11 @@ const routes = [
     path: '/newNotice',
     name: 'newNotice',
     component: () => import('../views/newNotice.vue')
+  },
+  {
+    path: '/about',
+    name: 'about',
+    component: () => import('../views/About.vue')
   },
   {
     path: '/signUp',
