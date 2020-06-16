@@ -1,33 +1,33 @@
 <template>
   <div class="home">
     <link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
-    <div class="block" style="margin-top: 1%">
-      <el-carousel height="600px" style="width: 1080px;margin: auto">
-        <el-carousel-item v-for="item in banner" :key="item">
-          <img :src="item.src" style="width: 100%;height: 100%">
-        </el-carousel-item>
-      </el-carousel>
-    </div>
-    <div style="height: 7%">
-    <div class="notice">
-      <div class="notice_font">
-        <transition
-                name="custom-classes-transition"
-                enter-active-class="animated rollIn"
-                leave-active-class="animated rollOut"
-        >
-          <h3 v-if="noticeTrue"><i class="el-icon-reading"></i><a :href="noticeDom.url">{{noticeDom.title}}</a></h3>
-        </transition>
-      </div>
-    </div>
-    </div>
+<!--    <div class="block" style="margin-top: 1%">-->
+<!--      <el-carousel height="600px" style="width: 1080px;margin: auto">-->
+<!--        <el-carousel-item v-for="item in banner" :key="item">-->
+<!--          <img :src="item.src" style="width: 100%;height: 100%">-->
+<!--        </el-carousel-item>-->
+<!--      </el-carousel>-->
+<!--    </div>-->
+<!--    <div style="height: 7%">-->
+<!--    <div class="notice">-->
+<!--      <div class="notice_font">-->
+<!--        <transition-->
+<!--                name="custom-classes-transition"-->
+<!--                enter-active-class="animated rollIn"-->
+<!--                leave-active-class="animated rollOut"-->
+<!--        >-->
+<!--          <h3 v-if="noticeTrue"><i class="el-icon-reading"></i><a :href="noticeDom.url">{{noticeDom.title}}</a></h3>-->
+<!--        </transition>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    </div>-->
 
-    <div class="Navigation" >
-      <div class="small_Navigation" v-for="(item,index) in buttons" :key="index">
-        <el-button class="small_Navigation_button" :class="item.className"  circle @click="toOthers(item.src)"></el-button>
-        <h3>{{item.title}}</h3>
-      </div>
-    </div>
+<!--    <div class="Navigation" >-->
+<!--      <div class="small_Navigation" v-for="(item,index) in buttons" :key="index">-->
+<!--        <el-button class="small_Navigation_button" :class="item.className"  circle @click="toOthers(item.src)"></el-button>-->
+<!--        <h3>{{item.title}}</h3>-->
+<!--      </div>-->
+<!--    </div>-->
   </div>
 </template>
 <script >

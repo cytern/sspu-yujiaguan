@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <div class="nav-bar">
-      <div class="left">{{time1}}</div>
-      <div class="center"><el-button type="text" style="font-size: 80px;color: white" @click="toIndex()"><i class="el-icon-house"></i></el-button></div>
-      <div class="right">{{time2}}</div>
-    </div>
+<!--    <div class="nav-bar">-->
+<!--      <div class="left">{{time1}}</div>-->
+<!--      <div class="center"><el-button type="text" style="font-size: 80px;color: white" @click="toIndex()"><i class="el-icon-house"></i></el-button></div>-->
+<!--      <div class="right">{{time2}}</div>-->
+<!--    </div>-->
     <router-view/>
   </div>
 </template>
@@ -40,10 +40,10 @@ import dayjs from 'dayjs'
         window.L2Dwidget.init({
           pluginRootPath: 'static/live2dw/',
           pluginJsPath: 'lib/',
-          pluginModelPath: 'live2d-widget-model-wanko/assets/',
+          pluginModelPath: 'live2d-widget-model-tororo/assets/',
           tagMode: false,
           debug: false,
-          model: { jsonPath: '../static/live2dw/live2d-widget-model-wanko/assets/wanko.model.json' },
+          model: { jsonPath: '../static/live2dw/live2d-widget-model-tororo/assets/tororo.model.json' },
           display: { position: 'right', width: 300, height: 650 },
           mobile: { show: true },
           log: false

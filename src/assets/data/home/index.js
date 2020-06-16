@@ -25,6 +25,11 @@ const totalData ={
             className:'index',
             src:'newNotice'
         },
+        {
+            title:'波浪效果测试',
+            className:'index',
+            src:'about'
+        },
     ],
     notice:[
         {
